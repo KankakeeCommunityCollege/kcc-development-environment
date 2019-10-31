@@ -7,3 +7,10 @@ This documentation assumes you are using an up-to-date Windows 10 machine with r
 ## Enable the Linux Subsystem
 
 ## Install git-csm
+
+Go to <https://git-scm.com/> and download the windows installer
+
+
+---
+
+[Back to main README](./README.md)

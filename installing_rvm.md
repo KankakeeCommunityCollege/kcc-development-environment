@@ -41,3 +41,7 @@ To run the RVM installation script, paste, and run, the following command into y
 ```bash
 \curl -sSL https://get.rvm.io | bash -s stable
 ```
+
+---
+
+[Back to main README](./README.md)

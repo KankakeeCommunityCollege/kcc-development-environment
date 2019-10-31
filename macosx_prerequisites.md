@@ -11,3 +11,7 @@ With Xcode up-to-date run the folowing command in your terminal:
 ```bash
 xcode-select --install
 ```
+
+---
+
+[Back to main README](./README.md)
