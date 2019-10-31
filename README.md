@@ -20,6 +20,5 @@ The same development environment can be acheived on Mac OS X, Linux, and Windows
 
 ## Environment Version Management
 
-- RVM
-- NVM
-
+- [Ruby Version Manager RVM](./installing_rvm.md)
+- [Node Version Manager NVM](./installing_nvm.md)
