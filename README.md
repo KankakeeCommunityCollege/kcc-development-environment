@@ -4,13 +4,11 @@
 
 ## Overview
 
-Our projects use both Node.js & a Ruby environment to compile static HTML sites.
-
-### Node.js
+Our projects use both Node.js & a Ruby environment to compile static HTML sites. The documents in this repo will guide you through setting up the development environment currently used by KCC.
 
 ## Platform
 
-The same development environment can be acheived on Mac OS X, Linux, and Windows. The installation instructions vary slightly by platform.
+A nearly identical development environment can be achieved on Mac OS X, Linux, and Windows.  With minor alterations, you can use the same dotfiles cross-platform. The installation instructions vary slightly by platform.
 
 ## Prerequisites
 
