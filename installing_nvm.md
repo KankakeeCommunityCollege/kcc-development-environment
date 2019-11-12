@@ -2,6 +2,8 @@
 
 > Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions
 
+Official documentation found at <https://github.com/nvm-sh/nvm>.
+
 ---
 
 ## NVM install script
@@ -10,7 +12,7 @@
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 ```
 
-## Verify installation
+## Verify Installation
 
 You should completely exit all terminal instances and quit whichever terminal program or app you are using. Restart your preferred terminal and run the following command:
 

@@ -2,6 +2,8 @@
 
 >RVM is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments from interpreters to sets of gems.
 
+Official documentation found at <https://rvm.io/>.
+
 We use RVM to ensure that we are using the same ruby environment across all the machines we develop on, for a given project.
 
 ---
@@ -24,6 +26,12 @@ Installing the `gnupg` Homebrew will install the `gpg` CLI.
 
 ```bash
 brew install gnupg
+```
+
+### Install `cowsay` via Homebrew
+
+```bash
+brew install cowsay
 ```
 
 ## Installing RVM

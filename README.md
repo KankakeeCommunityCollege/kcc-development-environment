@@ -18,5 +18,19 @@ A nearly identical development environment can be achieved on Mac OS X, Linux, a
 
 ## Environment Version Management
 
-- [Ruby Version Manager RVM](./installing_rvm.md)
-- [Node Version Manager NVM](./installing_nvm.md)
+- [Install Ruby Version Manager (RVM)](./installing_rvm.md)
+- [Install Node Version Manager (NVM)](./installing_nvm.md)
+
+## Setting Up RVM & NVM
+
+- [Setup RVM](./setup_rvm.md)
+- [Setup NVM](./setup_nvm.md)
+
+
+## Install Jekyll
+
+- [Install Jekyll](./installing_jekyll.md)
+
+## Install Gulpjs
+
+- [Install Gulp](./installing_gulp.md)
