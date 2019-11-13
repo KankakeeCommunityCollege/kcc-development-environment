@@ -10,6 +10,8 @@ Install the current stable version using:
 nvm install stable
 ```
 
+
+
 ## Install a Specific Version of Nodejs
 
 ```bash
@@ -18,6 +20,8 @@ nvm install v8.9.4
 nvm install 8.9.4 # no preceding "v" is valid too.
 ```
 
+
+
 ##  The `.nvmrc` File
 
 Each project should contain an `.nvmrc` file to control which version of Nodejs it uses. Below is the entire contents of an example `.nvmrc` file.
@@ -25,6 +29,8 @@ Each project should contain an `.nvmrc` file to control which version of Nodejs 
 ```bash
 v12.13.0
 ```
+
+
 
 ## Old Projects
 
@@ -36,7 +42,11 @@ v10.15.3
 v12.13.0
 ```
 
-Since the `gulp-cli` is dependent upon Nodejs, it is bound to the version it was installed with. This can be demonstrated using the following commands in terminal:
+
+
+## Upgrading Nodejs Versions
+
+**Since the `gulp-cli` is dependent upon Nodejs, it is bound to the version it was installed with.** This can be demonstrated using the following commands in terminal:
 
 ```bash
 nvm use 8.9.4
@@ -56,7 +66,9 @@ If a new stable release of Nodejs comes out, remember to install the `gulp-cli` 
 npm install gulp-cli -g
 ```
 
-## Add Function to Look for `.nvmrc`
+
+
+## Add Function to Look for `.nvmrc` File
 
 Our projects use an  `.nvmrc` file to control the version of Nodejs it uses.  When changing directories/projects, NVM does not look for the `.nvmrc` file itself--it needs a function to do that.
 
@@ -97,6 +109,8 @@ enter_directory() {
 
 export PROMPT_COMMAND=enter_directory
 ```
+
+
 
 ## NPM & NPX
 
