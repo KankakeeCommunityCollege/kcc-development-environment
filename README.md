@@ -30,6 +30,7 @@ A nearly identical development environment can be achieved on Mac OS X, Linux, a
 ## Install Jekyll
 
 - [Install Jekyll](./installing_jekyll.md)
+- [Install the `kcc-gem-theme`](./installing_theme.md)
 
 ## Install Gulpjs
 
