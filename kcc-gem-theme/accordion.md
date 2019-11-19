@@ -24,8 +24,8 @@
 
 - [Overview](#overview)
 - [Configuration](#configuration)
-  - [Jekyll `_config.yml`](#jekyllconfigyml)
-  - [Gulp `gulpconfig.yml`](#gulpgulpconfigyml)
+  - [Jekyll `_config.yml`](#jekyll-_configyml)
+  - [Gulp `gulpconfig.yml`](#gulpconfigyml)
 - [Accordion Collection](#accordion-collection)
   - [Accordion Defaults File](#accordion-defaults-file)
 - [Accordion Styling](#accordion-styling)
