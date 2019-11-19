@@ -42,18 +42,22 @@ To set the default ruby version for RVM use the following command:
 rvm --default use 2.6.3
 ```
 
+## The `.ruby-version` File
 
+> ```bash
+> rbenv: version `2.6.3' is not installed (set by viable-wombat.cloudvent.net/.ruby-version)
+> Please use one of the following versions:
+> 2.3.8
+> 2.4.6
+> 2.5.5
+> 2.6.2
+> ```
 
-## Version Control Using `.ruby-version` File
+**Adding a `.ruby-version` file for a version that CloudCannon does not have/support will break the CloudCannon build**
 
-> This file is also supported by [chruby](https://github.com/postmodern/chruby#readme) and [rbenv](https://github.com/sstephenson/rbenv#readme). `.ruby-version` is just a ruby name so it does not require trusting and is simpler to use than `.rvmrc`.
+CloudCannon **_only_** supports the following Ruby Versions:
 
-> `.rvmrc` has one major flaw - it requires trusting to prevent execution of unauthorized code, which makes it hard to use and complicates deployment to production
-
-For simplicity, projects use a `.ruby-version` file to control the ruby environment for that project.  Below is an example `.ruby-version ` file--its only contents being a valid version number for ruby.
-
-Example `.ruby-version` file:
-
-```bash
-2.3.6
-```
+- 2.3.8
+- 2.4.6
+- 2.5.5
+- 2.6.2
