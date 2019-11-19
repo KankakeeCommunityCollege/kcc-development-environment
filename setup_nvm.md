@@ -66,7 +66,9 @@ If a new stable release of Nodejs comes out, remember to install the `gulp-cli` 
 npm install gulp-cli -g
 ```
 
+## Errors After Nodejs Version Upgrade
 
+After upgrading the Nodejs version used in a project you need run `npm i` . **Upgrading Nodejs will break the node-sass bindings**, and you will likely see errors returned at terminal when running `npm run production`. To resolve this rebuild them using `npm rebuild node-sass`.
 
 ## Add Function to Look for `.nvmrc` File
 
