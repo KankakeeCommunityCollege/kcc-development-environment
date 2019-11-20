@@ -36,4 +36,10 @@ A nearly identical development environment can be achieved on Mac OS X, Linux, a
 
 - [Install Gulp](./installing_gulp.md)
 
+## KCC Gem Theme
+
+- [KCC Gem Theme](./kcc-gem-theme/README.md)
+  - [Accordion](./kcc-gem-theme/accordion.md)
+  - [Google Translate](./kcc-gem-theme/translate.md)
+
 ## Architecture Overview
