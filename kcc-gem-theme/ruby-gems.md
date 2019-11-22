@@ -54,3 +54,17 @@ The following list **ARE THE DIRECTORIES CONTAINING THE FILES THAT DIRECTLY CONT
  |-- LICENSE.txt ## Required for RubyGems project
  |__ README.md ## Also required
 ```
+
+All other files are part of the build process or there to create a demo site for the theme.
+
+### Creating Dev Builds
+
+The `kcc-gem-theme` uses the same npm scripts to generate a `_site/` build where you can preview the gem theme's demo site at `localhost:3000`. Changes that get pushed to the GitHub repo should use `npm run production`. **DO NOT PUSH AN `npm run development` BUILD TO THE REPO.**
+
+### Commit Files to `git`
+
+After previewing your changes in the demo site build (using `npm run production`), commit the changed files to `git`. Remember that only `assets/`, `_includes/`, `_layouts/`, and `_data/` count towards the Jekyll theme.
+
+### Change the Gem Version
+
+For RubyGems.org all Gem changes must be versioned. You cannot release the same version twice. If you yank a gem (`gem tank <GEM_NAME-VERSION>`) you can no longer use that gem version or version # (yank with caution).
