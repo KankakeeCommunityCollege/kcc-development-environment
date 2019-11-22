@@ -21,11 +21,12 @@ A nearly identical development environment can be achieved on Mac OS X, Linux, a
 - [Install Ruby Version Manager (RVM)](./installing_rvm.md)
 - [Install Node Version Manager (NVM)](./installing_nvm.md)
 
-## Setting Up RVM & NVM
+## Setting Up & Using RVM & NVM
 
 - [Setup RVM](./setup_rvm.md)
+- [Updating Ruby Versions](./update_ruby.md)
 - [Setup NVM](./setup_nvm.md)
-
+- [Updating Nodejs & npm Versions](./update_node.md)
 
 ## Install Jekyll
 
@@ -41,5 +42,6 @@ A nearly identical development environment can be achieved on Mac OS X, Linux, a
 - [KCC Gem Theme](./kcc-gem-theme/README.md)
   - [Accordion](./kcc-gem-theme/accordion.md)
   - [Google Translate](./kcc-gem-theme/translate.md)
+  - [Making Changes to the Theme](./kcc-gem-theme/ruby-gems.md)
 
 ## Architecture Overview
