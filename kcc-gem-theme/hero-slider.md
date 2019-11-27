@@ -55,9 +55,22 @@ The alt-text that appears in the slide image element's alt tag. This alt-text is
 
 #### URL
 
-The `url:` key's value must be an absolute URL with protocol (`https://` or `http://`) or a full-relative path within the current site.
+The `url:` key's entry can be one of the following:
+- Absolute url's containing the protocol (**note: you should _only_ use absolute links for sites at a different domain or sub-domain**):
+  - e.g. `https://foundation.kcc.edu/give` or `http://www.kcc.edu/`
+- Root relative url's or relative url's with directory traversal (**note: relative url's should never have the domain i.e. do NOT use: 'foundation.kcc.edu/give'**):
+  - Root relative: `/give` | with directory traversal: `../give` (**note: sliders/image-carousels are usually on the homepage, so the 'with directory traversal' usage case is rare**)
+- Relative url with no baseurl/directory traversal/domain:
+  - e.g. `give`
 
-`https://foundation.kcc.edu/scholarships` is valid entry for `url:`. If the hero-slider is within the `foundation.kcc.edu` site `/scholarships` will work too. **The slide's link does not get prepended with the page's  baseurl, so it must be a full-relative path.**
+KCC's policy is to open external links (links residing on a different domain than the user's location) in a new tab. Since absolute links are jumping to another domain, absolute url's get the addition of the `target="_blank"` attribute/value pair.
+
+##### How is the type of URL determined?
+
+The Liquid forloop in `_includes/hero-slider.html` that iterates over the slides, checks slides url's for absolute and relative links:
+1. If the url contains a protocol (`https://` or `http://`) it uses the literal value for `{{ slide.url }}` in the `href` attribute and adds `target="_blank"`.
+2. If the first character of the url is a `.` or `/` (the url has directory traversal or an absolute path) it also uses the literal value for `{{ slide.url }}` in the `href` attribute but does NOT open in a new tab.
+3. Everything else is regarded as a relative url with no baseurl/directory traversal/domain and get's the `{{ slide.url }}` prepended with `{{ page.baseurl }}` (i.e. `href="{{ page.baseurl }}{{ slide.url }}"`).
 
 #### Text
 
@@ -116,7 +129,7 @@ The includes file contains the html template to build-out the slider's elements.
 <section class="position__offset-fixed-nav">
   <div class="container container--tan-bg">
     {% includes hero-slider.html %}
-    <!-- More page content below 
+    <!-- More page content below
     ... -->
   </div>
 </section>
@@ -126,7 +139,7 @@ The includes file contains the html template to build-out the slider's elements.
 
 ### Adjust the `.hero-slider__slider--heading-container` width
 
-Depending on how many slides are in the slider, the its headings may appear off-center. You may need to override the `kcc-gem-theme`'s styling rules for the `.hero-slider__slider--heading-container` class to recenter them. This is usually only a couple percentage difference (`2%`). 
+Depending on how many slides are in the slider, the its headings may appear off-center. You may need to override the `kcc-gem-theme`'s styling rules for the `.hero-slider__slider--heading-container` class to recenter them. This is usually only a couple percentage difference (`2%`).
 
 To override the gem theme's styling, add the following rules to your current projects SASS files. The link to the `kcc-theme.css` stylesheet appears higher in the page's HTML than the project's `main.css` stylesheet. As a result, any duplicate selector's and rules in the project's stylesheet will override the gem theme's
 
@@ -151,14 +164,14 @@ To override the gem theme's styling, add the following rules to your current pro
   {% for slide in page.slides %}
     {% if forloop.first == true %}
     <div>
-      <a href="{{ slide.url }}"><img src="{{page.baseurl}}{{slide.image}}" class="img-fluid hero-slider__slider--slide-img {% if slide.white_background %} hero-slider__slide-img--border{% endif %}" alt="{{slide.alt-text}}" /></a>
+      <a {% if slide.url contains 'https://' or slide.url contains 'http:// %}target="_blank" href="{{ slide.url }}"{% elsif url_first_char == '.' or url_first_char == '/' %}href="{{ slide.url }}"{% else %}href="{{ page.baseurl }}{{ slide.url }}{% endif %}"><img src="{{page.baseurl}}{{slide.image}}" class="img-fluid hero-slider__slider--slide-img {% if slide.white_background %} hero-slider__slide-img--border{% endif %}" alt="{{slide.alt-text}}" /></a>
       <div class="hero-slider__slider--heading-container text-center">
         <h3 class="hero-slider__slider--slide-heading">{{slide.text}}</h3>
       </div>
     </div>
     {% else %}
     <div>
-      <a href="{{ slide.url }}"><img src="assets/img/placeholder.png" data-src="{{page.baseurl}}{{slide.image}}" class="img-fluid hero-slider__slider--slide-img {% if slide.white_background %} hero-slider__slide-img--border{% endif %}" alt="{{slide.alt-text}}" /></a>
+      <a {% if slide.url contains 'https://' or slide.url contains 'http:// %}target="_blank" href="{{ slide.url }}"{% elsif url_first_char == '.' or url_first_char == '/' %}href="{{ slide.url }}"{% else %}href="{{ page.baseurl }}{{ slide.url }}{% endif %}"><img src="assets/img/placeholder.png" data-src="{{page.baseurl}}{{slide.image}}" class="img-fluid hero-slider__slider--slide-img {% if slide.white_background %} hero-slider__slide-img--border{% endif %}" alt="{{slide.alt-text}}" /></a>
       <div class="hero-slider__slider--heading-container text-center">
         <h3 class="hero-slider__slider--slide-heading">{{slide.text}}</h3>
       </div>
@@ -206,7 +219,7 @@ export default wrapPowerText;
 
 ### `sliders.js` File
 
-The `assets/js/theme/src/sliders.js` file contains a module with custom JS/jQuery for the slick-slider functionality. **Slick requires jQuery to work.** 
+The `assets/js/theme/src/sliders.js` file contains a module with custom JS/jQuery for the slick-slider functionality. **Slick requires jQuery to work.**
 
 See <https://kenwheeler.github.io/slick/> for detailed documentation on the Slick slider.
 
@@ -235,4 +248,3 @@ export default initSliders;
 //      initSlick(); // Fire the function after the DOM has loaded.
 //    });
 ```
-
