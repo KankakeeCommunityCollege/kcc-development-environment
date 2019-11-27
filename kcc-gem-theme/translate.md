@@ -4,7 +4,7 @@
 
 
 
-![Screenshot of the language selection options in WIOA's Google Translate Menu](../assets/img/translate_1.jpg)
+![Screenshot of the language selection options in WIOA's Google Translate Menu](../assets/img/translate_2.jpg)
 
 
 
