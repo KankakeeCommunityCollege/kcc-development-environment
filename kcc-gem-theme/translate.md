@@ -19,8 +19,9 @@ translate: true
 # More _config.yml
 ```
 
-## The `.notranslate` Class
 
+
+## The `.notranslate` Class
 
 ![Screenshot of WIOA's 'contacts' section translated to Korean showing each person's untranslated name.](../assets/img/notranslate.jpg)
 

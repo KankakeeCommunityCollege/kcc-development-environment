@@ -1,5 +1,9 @@
 # The Accordion
 
+![Screenshot of Foundation's accordion on the 'Give' page.](../assets/img/accordion.jpg)
+
+
+
 ```
 ./
 |-- _includes/
