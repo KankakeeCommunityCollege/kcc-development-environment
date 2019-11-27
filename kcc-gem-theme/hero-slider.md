@@ -1,9 +1,10 @@
 # Hero Slider Component
 
-## Overview
-
 ![The hero-slider on the Foundation website](../assets/img/hero-slider.jpg)
-{: style="height: auto; width: 100%: max-width: 100%" }
+
+
+
+## Overview
 
 The hero-slider component consists of an `_includes/hero-slider.html` file, a `slider.js` file, `_hero-slider.scss`, and the page you want the slider to appear in. You also need to define a `slides:` collection in the page's YAML front-matter.
 
