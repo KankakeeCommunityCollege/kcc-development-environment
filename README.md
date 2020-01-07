@@ -43,6 +43,7 @@ A nearly identical development environment can be achieved on Mac OS X, Linux, a
   - [Accordion](./kcc-gem-theme/accordion.md)
   - [Google Translate](./kcc-gem-theme/translate.md)
   - [Hero Slider](./kcc-gem-theme/hero-slider.md)
+  - [Global Nav](./kcc-gem-theme/global-nav.md)
   - [Making Changes to the Theme](./kcc-gem-theme/ruby-gems.md)
 
 ## Architecture Overview
