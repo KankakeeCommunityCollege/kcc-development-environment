@@ -34,3 +34,18 @@ With the addition of CSS animation the mega-nav feels more reformed:
    }
 }
 ```
+
+## Configuration
+
+Configuration for site navigation is done in `_config.yml`.
+
+### Options
+
+#### `core_site` Option
+
+Setting the `core_site` option to true prevents the site from from including the nav-local elements in the navigation. Core sites don't have a local navigation since their content isn't that "deep" (i.e. resides to high in the overal site structure).
+
+```yaml
+core_site: true
+```
+
