@@ -67,16 +67,18 @@ Warning! PATH is not properly set up, '/home/<username>/.rvm/gems/ruby-2.6.3/bin
          to fix temporarily in this shell session run: 'rvm use ruby-2.6.3'.
 ```
 
-This is because the RVM install script is slopy when it modifies your dotfiles. It looks for any kind of shell initiallization file (whether for `bash`, `zsh`, `fish`, etc.) and injects its path entry.
+This is because the RVM install script is sloppy when it modifies your dotfiles. It looks for any kind of shell initialization file (whether for `bash`, `zsh`, `fish`, etc.) and injects its path entry.
 
-Your best option to fix this is to go through all the doftiles that the script just vomited code into and remove all RVM entries. Then, add them ONLY to the shell initialization files you use. Below is a list of all the files the RVM install script messes up:
+**_DO NOT_ "re-add RVM to your dotfiles". This will rerun the same scripts that probably caused the issue in the first place!**
+
+Your best option to fix this is to go through all the dotfiles that the script just vomited code into and remove all RVM entries. Then, add them ONLY to the shell initialization files you use. Below is a list of all the files the RVM install script messes up:
 
 - ~/.mkshrc
 - ~/.profile
-- ~/.bashrc 
-- ~/.bash_profile 
+- ~/.bashrc
+- ~/.bash_profile
 
-Since I call most of my bash initiallization files from within `~/.bash_profile`, this is where I placed my only RVM entries.
+Since I call most of my bash initialization files from within `~/.bash_profile`, this is where I placed my only RVM entries.
 
 My RVM path entry (`export PATH="$PATH:$HOME/.rvm/bin"`) is the last item in my `.bash_profile` to ensure that it is the last `PATH="...`  entry:
 
@@ -97,8 +99,6 @@ unset file;
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 ```
-
-
 
 ---
 
