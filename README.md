@@ -39,7 +39,7 @@ A nearly identical development environment can be achieved on Mac OS X, Linux, a
 
 ## KCC Gem Theme
 
-- [KCC Gem Theme](./kcc-gem-theme/README.md)
+- [KCC Gem Theme](https://github.com/KankakeeCommunityCollege/kcc-development-environment/tree/master/kcc-gem-theme#kcc-gem-theme)
   - [Accordion](./kcc-gem-theme/accordion.md)
   - [Google Translate](./kcc-gem-theme/translate.md)
   - [Hero Slider](./kcc-gem-theme/hero-slider.md)
