@@ -20,7 +20,7 @@ CloudCannon FTP settings are located within each sites' settings area. This docu
 
 Within the general settings area of any site, FTP settings are located under the "Output Syncing" area:
 
-![Screenshot of the 'Output Syncing' options](../assets/img/output-settings.png){: .text-center .img-fluid}
+![Screenshot of the 'Output Syncing' options](../assets/img/output-settings.png)
 
 ### "FTP Details" Modal
 
