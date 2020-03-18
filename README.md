@@ -47,3 +47,8 @@ A nearly identical development environment can be achieved on Mac OS X, Linux, a
   - [Making Changes to the Theme](./kcc-gem-theme/ruby-gems.md)
 
 ## Architecture Overview
+
+## CloudCannon
+
+- [CloudCannon](./cloudcannon/)
+- [CloudCannon FTP Settings](./cloudcannon/cloudcannon-ftp.md)
