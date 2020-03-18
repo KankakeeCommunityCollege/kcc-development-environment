@@ -52,3 +52,9 @@ A nearly identical development environment can be achieved on Mac OS X, Linux, a
 
 - [CloudCannon](./cloudcannon/)
 - [CloudCannon FTP Settings](./cloudcannon/cloudcannon-ftp.md)
+
+
+## GNU nano
+
+- [nano](./nano/)
+- [Upgrade to latest](./nano/upgrade.md)
