@@ -57,4 +57,4 @@ A nearly identical development environment can be achieved on Mac OS X, Linux, a
 ## GNU nano
 
 - [nano](./nano/)
-- [Upgrade to latest](./nano/upgrade.md)
+- [Upgrade to latest](./nano/upgrade-nano.md)
