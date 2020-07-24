@@ -9,3 +9,7 @@
 
 ## Development
 - [Making Changes to the Theme](./ruby-gems.md)
+
+## Use in a Project
+
+- [installing-gem-theme](./installing-gem-theme.md)
