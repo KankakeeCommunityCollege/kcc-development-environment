@@ -34,38 +34,40 @@ The hero-slider component consists of an `_includes/hero-slider.html` file, a `s
 
 ### In-page `slides` collection
 
-First, in the page you have chosen the slider to appear in, define the slides collection using the `slides:` key in the file's front-matter.  Each slide should contain all the front-matter fields shown below.
+First, in the page you have chosen the slider to be, define the slides collection using the `slides:` key in the file's front-matter.  Each slide should contain all the front-matter fields shown below.
 
-If the slide's image has a white colored background, it should get an extra front-matter key and value of  `white_background: true` .
+If the slide's image has a white-colored background, it should get an extra front-matter key and value of  `white_background: true` .
 
 ```yaml
 slides:
   - image: uploads/<IMAGE_NAME>.jpg
     alt-text: "Alternate text for the slide's img element"
-    url: "URL for slide's link (must use protocol)"
-    text: Heading to appear over the slide. (OPTIONAL) If the image has text already, you may want to leave this value blank.
+    url: "URL for slide's link: absolute (with protocal), or relative links (within the site) both work"
+    text: Heading to appear over the slide (OPTIONAL). If you don't want heading, **delete** the `text:` completely key.
   # white_background: true ## (OPTIONAL) Add for images with white colored backgrounds
 ```
+
+Each key, and their value's are outlined bellow.
 
 #### Image
 
 **ALL SLIDES MUST BE CROPPED TO A 16:9 WIDTH:HEIGHT IMAGE RATIO**
 
-The `image: ` key's value should contain the path to the image for the slide
+The `image: ` key's value should contain the relative path to the image for the slide (e.g. `uploads/my-image-file.png`)
 
 #### Alt-text
 
-The alt-text that appears in the slide image element's alt tag. This alt-text is required for web-accessibility. **If the slide-image contains readable text that is not strictly decorative, type the text into the `alt-text:` field.**
+The alt-text becomes the alternate-text attribute for the slide's `<img>` element. This alt-text is required for web-accessibility. **If the slide-image contains readable text that is not strictly decorative, type the text into the `alt-text:` field.**
+
+**Providing alt-text enables user's with screen-readers, or other assistive technologies, to understand the image's content. Your descriptive text should be thorough enough to describe the image to someone who cannot see it. _DO NOT LEAVE ALT-TEXT EMPTY!_**
 
 #### URL
 
 The `url:` key's entry can be one of the following:
+
 - Absolute url's containing the protocol (**note: you should _only_ use absolute links for sites at a different domain or sub-domain**):
   - e.g. `https://foundation.kcc.edu/give` or `http://www.kcc.edu/`
-- Root relative url's or relative url's with directory traversal (**note: relative url's should never have the domain i.e. do NOT use: 'foundation.kcc.edu/give'**):
-  - Root relative: `/give` | with directory traversal: `../give` (**note: sliders/image-carousels are usually on the homepage, so the 'with directory traversal' usage case is rare**)
-- Relative url with no baseurl/directory traversal/domain:
-  - e.g. `give`
+- Relative url's (**note: relative url's should never have the domain i.e. do NOT use: 'foundation.kcc.edu/give'**)
 
 KCC's policy is to open external links (links residing on a different domain than the user's location) in a new tab. Since absolute links are jumping to another domain, absolute url's get the addition of the `target="_blank"` attribute/value pair.
 
@@ -78,19 +80,19 @@ The Liquid forloop in `_includes/hero-slider.html` that iterates over the slides
 
 #### Text
 
-`text: ` is the contents of the heading that will appear in front of the slide-image. Use a short/concise phrase or sentence for its value—long `text: ` entries will cause layout issues.
+`text: ` is the contents of the heading that will appear over the slide-image. Use a short/concise phrase or sentence—long `text: ` entries will cause layout issues.
 
-If your image already contains text, you can omit the heading by leaving `text:`'s value blank. **The text key's VALUE is optional, however, its key is required.**
+If your image already contains text, you can omit the heading by removing/deleteing the `text:` key completely. **Be sure to add the text contained in the image as `alt-text`.**
 
 ##### "The POWER of Community" text-effect
 
-You can easily wrap a word in a `<span>` tag that applies styling to make the text more bold.  Use double-asterisks on either side of a word      ( e.g. `**<TEXT>**`). **DO NOT INCLUDE WHITESPACE ANY WHITESPACE CHARACTERS IN BETWEEN THE DOUBLE_ASTERISKS INCLUDING WORDS SEPARATED BY SPACES**
+You can easily wrap a word in a `<span>` tag that applies styling to make the text more bold.  Use double-asterisks on either side of a word ( e.g. `**<TEXT>**`). **DO NOT INCLUDE WHITESPACE ANY WHITESPACE CHARACTERS IN BETWEEN THE DOUBLE_ASTERISKS INCLUDING WORDS SEPARATED BY SPACES**
 
 the `assets/js/theme/src/wrapPowerText.js` module handles the functionality for this text-effect.
 
 #### (OPTIONAL) `white_background:` Key
 
-If the slide-image has a white background, add the optional `white_background: true` setting to the slide. This applies a class to that slide to provide a subtle light gray border for visual contrast against the page's background.
+If the slide-image has a white background, add the optional `white_background: true` setting to the slide. This applies a class to that slide which creates a subtle light-gray border. This creates a visual contrast against the page's background.
 
 #### Example Slides Collection
 
@@ -120,8 +122,6 @@ slides:
     url: 'https://foundation.kcc.edu'
     text: The **POWER** of Giving
 ```
-
-
 
 ### Include the `hero-slider.html` File
 
