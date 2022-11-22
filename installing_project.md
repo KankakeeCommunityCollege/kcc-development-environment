@@ -30,6 +30,7 @@ git clone git@github.com:KankakeeCommunityCollege/student-resources.git
 ```
 
 **This requires you have GitHub SSH authentication setup.**
+
 Use following GitHub Docs to setup SSH:
 
 - [Checking for existing SSH keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys)
