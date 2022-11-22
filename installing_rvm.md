@@ -1,18 +1,32 @@
 # Ruby Version Manager (RVM)
 
+> *Last updated on **11/22/2022***
+>
 >RVM is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments from interpreters to sets of gems.
 
-Official documentation found at <https://rvm.io/>.
+| Current Ruby Version (for KCC projects) |
+|-----------------------------------------|
+| `ruby-2.6.3`                            |
 
-We use RVM to ensure that we are using the same ruby environment across all the machines we develop on, for a given project.
+- [Ruby Version Manager (RVM)](#ruby-version-manager-rvm)
+  - [RVM Prerequisites](#rvm-prerequisites)
+    - [Install Homebrew](#install-homebrew)
+    - [Install GPG via Homebrew](#install-gpg-via-homebrew)
+  - [Installing RVM](#installing-rvm)
+    - [Get the GPG Keys](#get-the-gpg-keys)
+    - [Run the Install Script](#run-the-install-script)
+  - [Install `ruby-2.6.3`](#install-ruby-263)
+  - [Set the Default ruby version](#set-the-default-ruby-version)
+
+Official documentation found at <https://rvm.io/>.
 
 ---
 
 ## RVM Prerequisites
 
-On Mac OS X you will need gpg in order to install RVM's GPG keys. The easiest way to do this is install `gnupg` via homebrew.
+On Mac OS X you will need gpg in order to install RVM's GPG keys. The easiest way to do this is install `gnupg` via **Homebrew**.
 
-### Homebrew installation:
+### Install Homebrew
 
 Install Homebrew using the following command in terminal:
 
@@ -22,16 +36,10 @@ Install Homebrew using the following command in terminal:
 
 ### Install GPG via Homebrew
 
-Installing the `gnupg` Homebrew will install the `gpg` CLI.
+Installing the `gnupg` Homebrew package will install the `gpg` CLI (needed to install RVM.)
 
 ```bash
 brew install gnupg
-```
-
-### Install `cowsay` via Homebrew
-
-```bash
-brew install cowsay
 ```
 
 ## Installing RVM
@@ -48,58 +56,29 @@ gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703
 
 ### Run the Install Script
 
-To run the RVM installation script, paste, and run, the following command into your terminal. Escaping `curl` with a `\` ensures that `curl` will run without using any aliases. RVM recommends running the installation script using the escaped `\curl` command to prevent it from "misbehaving".
+To run the RVM installation script, paste, and run, the following command into your terminal.
+
+RVM recommends running the installation script using the escaped `\curl` command to prevent it from "misbehaving".
 
 ```bash
 \curl -sSL https://get.rvm.io | bash -s stable
 ```
 
-### Fix RVM Path Warning
+## Install `ruby-2.6.3`
 
-If you used the normal installation instructions (provided at https://rvm.io) you will most likely have path issues when running RVM:
-```bash
-rvm list
-
-# Returned message:
-Warning! PATH is not properly set up, '/home/<username>/.rvm/gems/ruby-2.6.3/bin' is not at first place,
-         usually this is caused by shell initialization files - check them for 'PATH=...' entries,
-         it might also help to re-add RVM to your dotfiles: 'rvm get stable --auto-dotfiles',
-         to fix temporarily in this shell session run: 'rvm use ruby-2.6.3'.
-```
-
-This is because the RVM install script is sloppy when it modifies your dotfiles. It looks for any kind of shell initialization file (whether for `bash`, `zsh`, `fish`, etc.) and injects its path entry.
-
-**_DO NOT_ "re-add RVM to your dotfiles". This will rerun the same scripts that probably caused the issue in the first place!**
-
-Your best option to fix this is to go through all the dotfiles that the script just vomited code into and remove all RVM entries. Then, add them ONLY to the shell initialization files you use. Below is a list of all the files the RVM install script messes up:
-
-- ~/.mkshrc
-- ~/.profile
-- ~/.bashrc
-- ~/.bash_profile
-
-Since I call most of my bash initialization files from within `~/.bash_profile`, this is where I placed my only RVM entries.
-
-My RVM path entry (`export PATH="$PATH:$HOME/.rvm/bin"`) is the last item in my `.bash_profile` to ensure that it is the last `PATH="...`  entry:
+To install `ruby-2.6.3` use the following rvm command:
 
 ```bash
-# ~/.bash_profile
-
-[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
-
-source ~/.bashrc # For NVM
-
-for file in ~/.{bash_prompt,aliases,functions}; do
-        [ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+rvm install 2.6.3
 ```
 
----
+## Set the Default ruby version
+
+To set the default ruby version:
+```bash
+rvm --default use 2.6.3
+```
+
+-----
 
 [Back to main README](./README.md)

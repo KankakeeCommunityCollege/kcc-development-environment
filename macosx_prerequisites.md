@@ -1,17 +1,38 @@
 # Mac OS X Prerequisites
 
+> *Last updated on **11/22/2022***
+>
 > Get your mac ready for setting up the development environment.
 
-Currently, we are using iMac and late-2015 Macbook Pro's. We are on a modern macOS ('macOS Mojave' v10.14.6 despite the recent release of 'macOS Catalina').
+- [Mac OS X Prerequisites](#mac-os-x-prerequisites)
+  - [Mac OS X Version](#mac-os-x-version)
+  - [Xcode](#xcode)
+  - [Install Xcode Command Line Tools](#install-xcode-command-line-tools)
+
+-----
+
+## Mac OS X Version
+
+**macOS Monterey** Version 12.6
+
+-----
+
+## Xcode
+
+Go to the Mac **App Store** and search for and download ***Xcode***.
+
+Update Xcode on regular basis.
+
+-----
 
 ## Install Xcode Command Line Tools
 
-With Xcode up-to-date run the folowing command in your terminal:
+With Xcode up-to-date run the following command in your terminal:
 
 ```bash
 xcode-select --install
 ```
 
----
+-----
 
 [Back to main README](./README.md)
