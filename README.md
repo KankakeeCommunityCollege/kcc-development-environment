@@ -59,6 +59,10 @@ We use RVM and NVM to manage versions of Ruby and Node (respectively.)
 
 -----
 
+## Setting Up Dotfiles
+
+- [Setting up Dotfiles](#dotfiles.md)
+
 ## ~~Setting Up & Using RVM & NVM~~
 
 - ~~[Setup RVM](./setup_rvm.md)~~

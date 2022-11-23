@@ -76,13 +76,15 @@ npm run production
 npm-p ## requires an alias
 ```
 
-A production build still watches for file changes and creates a local server at `localhost:3000`, for you to preview in your browser locally.
+A production build still watches for file changes and creates a local server at `localhost:3000`, to preview in your browser locally.
 
-This means you need to stop the running commands using <kbd>control</kbd> + <kbd>C</kbd>.
+This means you need to stop the running commands using <kbd>control</kbd> + <kbd>C</kbd>; be sure Webpack and Jekyll have run and are idle first.
 
 A production build creates minified and polyfilled JavaScript (determined by `browserslist` settings.) It also creates a prefixed and minified CSS file.
 
-If you modify any SCSS or JS modules you will have all new bundles, <abbr title="Chunks are smaller modules of JS code which get imported (dynamically) into the main bundle.">chunks</abbr>, and stylesheet files generated. This is because the filenames contain a unique hash which is computed from the bundled files. **Be sure to `add`, `commit` and `push` *all* the new JS and CSS file changes to GitHub resulting from a production build.** **You must also include the changed `_data/hash.yml` file!** If you don't, your `<script>` and `<style>` `src` and `href` attributes will not point to the new JS and CSS filenames — breaking the site.
+If you modify any SCSS or JS modules — even deleting a single space — you will have all new bundles, <abbr title="Chunks are smaller modules of JS code which get imported (dynamically) into the main bundle.">chunks</abbr>, and stylesheet files generated. This is because the filenames contain a unique hash which is computed from the bundled files.
+
+**Be sure to `add`, `commit` and `push` *all* the new JS and CSS file changes to GitHub resulting from a production build.** **You must also include the changed `_data/hash.yml` file!** If you don't, your `<script>` and `<style>` `src` and `href` attributes will not point to the new JS and CSS filenames — breaking the site.
 
 ### Development Build
 
@@ -96,7 +98,7 @@ npm-d ## requires an alias
 
 Stop the running processes using <kbd>control</kbd> + <kbd>C</kbd>.
 
-**Never push a development build to GutHub!** If you do, run a production build, and then commit and push any file changes to GitHub.
+**Do not push a development build to GutHub!** If you do, just run a production build, and then commit and push any file changes to GitHub.
 
 A dev build injects inline CSS into the document `<head></head>` instead of a `<link>`; this is a *Webpack* feature for more performant dev builds.
 
@@ -108,10 +110,9 @@ You can preview the development build and see live changes by going to `localhos
 
 ## Update Browserslist `caniuse` Database
 
-The CSS prefixing and JS polyfilling is determined from the projects `browserslist` setting (found in project's `package.json` file,) and a `caniuse` database of browser compatibility.
+The CSS prefixing and JS polyfilling is determined from a projects `browserslist` setting (in `package.json`,) and a `caniuse` database of browser compatibility.
 
-You should update a projects `caniuse` database often (or try to do it once a month.)
-Use our `npm` script to update the database:
+You should update a projects `caniuse` database often (or try to do it once a month.) Use our `npm` script to update the database:
 ```bash
 npm run browserslist
 ```
