@@ -15,12 +15,12 @@ Our projects use **Ruby** and **Node.js** to build static HTML sites, and compil
 ## Prerequisites
 
 <!-- no toc -->
-- **[Mac OS X Prerequisites](./macosx_prerequisites.md)**
-  - [Mac OS X Version](./macosx_prerequisites.md#mac-os-x-version)
-  - [Xcode](./macosx_prerequisites.md#xcode)
-  - [Install Xcode Command Line Tools](./macosx_prerequisites.md#install-xcode-command-line-tools)
-- ~~[Windows Prerequisites](./windows_prerequisites.md)~~
-- ~~[Linux Prerequisites](./linux_prerequisites.md)~~
+- **[Mac OS X Prerequisites](./prerequisites/)**
+  - [Mac OS X Version](./prerequisites/#mac-os-x-version)
+  - [Xcode](./prerequisites/#xcode)
+  - [Install Xcode Command Line Tools](./prerequisites/#install-xcode-command-line-tools)
+- ~~[Windows Prerequisites](./prerequisites/windows_prerequisites.md)~~
+- ~~[Linux Prerequisites](./prerequisites/linux_prerequisites.md)~~
 
 -----
 
@@ -29,15 +29,15 @@ Our projects use **Ruby** and **Node.js** to build static HTML sites, and compil
 We use RVM and NVM to manage versions of Ruby and Node (respectively.)
 
 <!-- no toc -->
-- **[Ruby Version Manager (RVM)](./installing_rvm.md)**
-  - [RVM Prerequisites](./installing_rvm.md#rvm-prerequisites)
-    - [Install Homebrew](./installing_rvm.md#install-homebrew)
-    - [Install GPG via Homebrew](./installing_rvm.md#install-gpg-via-homebrew)
-  - [Installing RVM](./installing_rvm.md#installing-rvm)
-    - [Get the GPG Keys](./installing_rvm.md#get-the-gpg-keys)
-    - [Run the Install Script](./installing_rvm.md#run-the-install-script)
-  - [Install `ruby-2.6.3`](./installing_rvm.md#install-ruby-263)
-  - [Set the Default ruby version](./installing_rvm.md#set-the-default-ruby-version)
+- **[Ruby Version Manager (RVM)](./rvm/)**
+  - [RVM Prerequisites](./rvm/#rvm-prerequisites)
+    - [Install Homebrew](./rvm/#install-homebrew)
+    - [Install GPG via Homebrew](./rvm/#install-gpg-via-homebrew)
+  - [Installing RVM](./rvm/#installing-rvm)
+    - [Get the GPG Keys](./rvm/#get-the-gpg-keys)
+    - [Run the Install Script](./rvm/#run-the-install-script)
+  - [Install `ruby-2.6.3`](./rvm/#install-ruby-263)
+  - [Set the Default ruby version](./rvm/#set-the-default-ruby-version)
 
 <br>
 
@@ -52,13 +52,13 @@ We use RVM and NVM to manage versions of Ruby and Node (respectively.)
 ## Installing & Building a Project
 
 <!-- no toc -->
-- **[Installing and Building a Project](./installing_project.md)**
-  - [Clone the Project](./installing_project.md#clone-the-project)
-  - [Install Dependencies](./installing_project.md#install-dependencies)
-  - [Running a Build](./installing_project.md#running-a-build)
-    - [Production Build](./installing_project.md#production-build)
-    - [Development Build](./installing_project.md#development-build)
-  - [Update Browserslist `caniuse` Database](./installing_project.md#update-browserslist-caniuse-database)
+- **[Installing and Building a Project](./projects/)**
+  - [Clone the Project](./projects/#clone-the-project)
+  - [Install Dependencies](./projects/#install-dependencies)
+  - [Running a Build](./projects/#running-a-build)
+    - [Production Build](./projects/#production-build)
+    - [Development Build](./projects/#development-build)
+  - [Update Browserslist `caniuse` Database](./projects/#update-browserslist-caniuse-database)
 
 -----
 
@@ -75,19 +75,21 @@ We use RVM and NVM to manage versions of Ruby and Node (respectively.)
 
 -----
 
-## ~~Setting Up & Using RVM & NVM~~
+## Archived Content
 
-- ~~[Setup RVM](./setup_rvm.md)~~
-- ~~[Updating Ruby Versions](./update_ruby.md)~~
-- ~~[Setup NVM](./setup_nvm.md)~~
-- ~~[Updating Nodejs & npm Versions](./update_node.md)~~
+Archived content is documentation that is either outdated or no longer relevant.
 
------
+### ~~Setting Up & Using RVM & NVM~~
 
-~~## Install Jekyll~~
+- ~~[Setup RVM](./archive/setup_rvm.md)~~
+- ~~[Updating Ruby Versions](./archive/update_ruby.md)~~
+- ~~[Setup NVM](./archive/setup_nvm.md)~~
+- ~~[Updating Nodejs & npm Versions](./archive/update_node.md)~~
 
-- ~~[Install Jekyll](./installing_jekyll.md)~~
-- ~~[Install the `kcc-gem-theme`](./installing_theme.md)~~
+### ~~Install Jekyll~~
+
+- ~~[Install Jekyll](./archive/installing_jekyll.md)~~
+- ~~[Install the `kcc-gem-theme`](./archive/installing_theme.md)~~
 
 -----
 
