@@ -81,4 +81,4 @@ rvm --default use 2.6.3
 
 -----
 
-[Back to main README](../)
+[Back to main README](./)
