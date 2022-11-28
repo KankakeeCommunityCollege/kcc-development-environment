@@ -1,5 +1,7 @@
 # Setting Up Dotfiles
 
+> *Last updated on **11/28/2022***
+
 - [Setting Up Dotfiles](#setting-up-dotfiles)
   - [Load Custom Dotfiles in `.bash_profile`](#load-custom-dotfiles-in-bash_profile)
   - [`.functions`](#functions)
@@ -9,6 +11,8 @@
     - [Other](#other)
 
 This document covers setting up dotfiles for `bash` and adding some helpful functions and aliases.
+
+These functions and aliases are designed to make common tasks and commands easier and quicker when working in terminal (bash).
 
 -----
 
@@ -68,6 +72,8 @@ enter_directory() {
 
 export PROMPT_COMMAND=enter_directory
 ```
+
+-----
 
 ## `.aliases`
 
@@ -153,3 +159,7 @@ alias npm-d="npm run development"
 # Remove node_modules/ & package.json for doing a fresh npm install
 alias rm_npm="rm -rf package-lock.json && rm -rf node_modules && echo 'Deleted package-lock.json & node_modules/'"
 ```
+
+-----
+
+[Back to main README](./README.md)
