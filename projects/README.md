@@ -21,7 +21,9 @@ First you need to clone a project:
 - Copy the Github SSH URL to your clipboard
 - Clone using `git clone <clipboard-contents>`
 
-![Screenshot of the GitHub "<> Code" button dropdown for student-resources](../assets/img/github-clone.png)
+<p align="center">
+  <img src="../assets/img/github-clone.png" alt="Screenshot of the GitHub '<> Code' button dropdown for student-resources" height="448" width="500">
+</p>
 
 Example using the Student Resources project:
 
