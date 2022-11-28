@@ -73,6 +73,13 @@ We use RVM and NVM to manage versions of Ruby and Node (respectively.)
     - [Git](./dotfiles/#git)
     - [Other](./dotfiles/#other)
 
+
+-----
+
+## Publishing Branch Workflow
+
+- [Publishing Branch Workflow](./publishing/)
+
 -----
 
 ## Archived Content
