@@ -121,4 +121,4 @@ You need to run a new production build after updating the `caniuse` database. Si
 
 -----
 
-[Back to main README](./README.md)
+[Back to main README](https://github.com/KankakeeCommunityCollege/kcc-development-environment)
