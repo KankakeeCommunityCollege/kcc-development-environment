@@ -72,4 +72,4 @@ See [Install Homebrew](./installing_rvm/#install-homebrew) (in our RVM documenta
 
 -----
 
-[Back to main README](./)
+[Back to main README](/KankakeeCommunityCollege/kcc-development-environment/)
