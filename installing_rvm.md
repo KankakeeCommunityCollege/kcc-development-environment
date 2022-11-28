@@ -81,4 +81,4 @@ rvm --default use 2.6.3
 
 -----
 
-[Back to main README](/KankakeeCommunityCollege/kcc-development-environment/)
+[Back to main README](./README.md)
