@@ -1,0 +1,70 @@
+#!/usr/bin/env bash
+
+# Easier navigation: .., ..., ...., ....., ~ and -
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~" # `cd` is probably faster to type though
+alias -- -="cd -"
+alias back="cd $OLDPWD"
+
+# Shortcuts
+alias d="cd ~/Documents"
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias r="cd ~/repositories"
+
+## Git Aliases
+alias g="git"
+alias gb="git branch"                       # alias for git branch
+alias gs="git status"                       # alias for git status
+alias ga="git add"
+alias gc="git commit"
+alias gl="git log"
+alias glo="git log --pretty=online"
+alias glu="git log --pretty=format: '%h %ad | %s%d [%an]' --graph --date=short"
+alias go="git checkout"
+alias gt="git tag"
+alias grs="git reset"
+alias grv="git revert"
+alias gf="git fetch"
+alias gm="git merge"
+alias gpom="git push -u origin master"
+alias gpum="git pull origin master"
+alias gd="git diff"                         # alias for git diff
+alias gpo="git push origin"
+alias gob="git checkout -b"
+
+# My custom git aliases for working with a publish branch (i.e. CloudCannon setup for publishing workflow)
+alias gpop="git push -u origin publish"
+alias gop="git checkout publish"
+alias gom="git checkout master"
+alias gpu="git pull"
+alias gmp="git merge publish"
+alias gmm="git merge master"
+
+# Undo a 'git push'
+alias undopush="git push -f origin HEAD^:master"
+
+# Stop git from tracking an already cached & tracked file
+# Usage:`uncache <FILE_NAME>`
+alias uncache="git rm --cached"
+
+# Find the remote to the current repo
+alias gr="git remote"
+# Unstage a staged change `$ unstage <filename>`
+alias unstage="git reset HEAD"
+alias uncommit="git reset --soft HEAD~1"
+# Discard a change `$ discard filename`
+alias discard="git checkout --"
+
+alias server="python -m SimpleHTTPServer 8000" # Creates a simple python server locally
+alias nuke="rm -rf" # Remove files recursively and forcefully — use with caution!
+
+# Run common NPM scripts
+alias npm-p="npm run production"
+alias npm-d="npm run development"
+
+# Remove node_modules/ & package.json for doing a fresh npm install
+alias rm_npm="rm -rf package-lock.json && rm -rf node_modules && echo 'Deleted package-lock.json & node_modules/'"

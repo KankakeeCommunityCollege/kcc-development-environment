@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# Use a local .nvmrc file if present
+## REQUIRES cowsay — install via homebrew
+enter_directory() {
+  if [[ $PWD == $PREV_PWD ]]; then
+    return
+  fi
+
+  PREV_PWD=$PWD
+  [[ -f ".nvmrc" ]] && nvm use > /dev/null 2>&1 && nvm use | cowsay $n
+}
+
+export PROMPT_COMMAND=enter_directory

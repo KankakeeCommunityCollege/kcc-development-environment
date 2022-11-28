@@ -1,6 +1,6 @@
 # KCC Development Environment
 
-> *Last updated on **11/22/2022***
+> *Last updated on **11/28/2022***
 >
 > Documentation on setting up the development environment needed for KCC's redesign projects.
 
@@ -61,7 +61,14 @@ We use RVM and NVM to manage versions of Ruby and Node (respectively.)
 
 ## Setting Up Dotfiles
 
-- [Setting up Dotfiles](#dotfiles.md)
+<!-- no toc -->
+- [Setting up Dotfiles](./dotfiles/README.md)
+  - [Load Custom Dotfiles in `.bash_profile`](./dotfiles/README.md#load-custom-dotfiles-in-bash_profile)
+  - [`.functions`](./dotfiles/README.md#functions)
+  - [`.aliases`](./dotfiles/README.md#aliases)
+    - [Folder Navigation](./dotfiles/README.md#folder-navigation)
+    - [Git](./dotfiles/README.md#git)
+    - [Other](./dotfiles/README.md#other)
 
 ## ~~Setting Up & Using RVM & NVM~~
 
