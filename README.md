@@ -62,13 +62,15 @@ We use RVM and NVM to manage versions of Ruby and Node (respectively.)
 ## Setting Up Dotfiles
 
 <!-- no toc -->
-- [Setting up Dotfiles](./dotfiles/README.md)
-  - [Load Custom Dotfiles in `.bash_profile`](./dotfiles/README.md#load-custom-dotfiles-in-bash_profile)
-  - [`.functions`](./dotfiles/README.md#functions)
-  - [`.aliases`](./dotfiles/README.md#aliases)
-    - [Folder Navigation](./dotfiles/README.md#folder-navigation)
-    - [Git](./dotfiles/README.md#git)
-    - [Other](./dotfiles/README.md#other)
+- [Setting up Dotfiles](./dotfiles/)
+  - [Load Custom Dotfiles in `.bash_profile`](./dotfiles/#load-custom-dotfiles-in-bash_profile)
+  - [`.functions`](./dotfiles/#functions)
+  - [`.aliases`](./dotfiles/#aliases)
+    - [Folder Navigation](./dotfiles/#folder-navigation)
+    - [Git](./dotfiles/#git)
+    - [Other](./dotfiles/#other)
+
+-----
 
 ## ~~Setting Up & Using RVM & NVM~~
 
