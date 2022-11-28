@@ -38,11 +38,14 @@ We use RVM and NVM to manage versions of Ruby and Node (respectively.)
     - [Run the Install Script](./installing_rvm.md#run-the-install-script)
   - [Install `ruby-2.6.3`](./installing_rvm.md#install-ruby-263)
   - [Set the Default ruby version](./installing_rvm.md#set-the-default-ruby-version)
-- **[Node Version Manager (NVM)](./installing_nvm.md)**
-  - [NVM install script](./installing_nvm.md#nvm-install-script)
-    - [Verify Installation](./installing_nvm.md#verify-installation)
-  - [Add Bash Function](./installing_nvm.md#add-bash-function)
-    - [Install `cowsay` via Homebrew](./installing_nvm.md#install-cowsay-via-homebrew)
+
+<br>
+
+- **[Node Version Manager (NVM)](./nvm/)**
+  - [NVM install script](./nvm/#nvm-install-script)
+    - [Verify Installation](./nvm/#verify-installation)
+  - [Add Bash Function](./nvm/#add-bash-function)
+    - [Install `cowsay` via Homebrew](./nvm/#install-cowsay-via-homebrew)
 
 -----
 
