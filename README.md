@@ -1,6 +1,6 @@
 # KCC Development Environment
 
-> *Last updated on **11/28/2022***
+> *Last updated on **11/29/2022***
 >
 > Documentation on setting up the development environment needed for KCC's redesign projects.
 
@@ -78,7 +78,10 @@ We use RVM and NVM to manage versions of Ruby and Node (respectively.)
 
 ## Publishing Branch Workflow
 
+<!-- no toc -->
 - [Publishing Branch Workflow](./publishing/)
+  - [Creating a `publish` branch](./publishing/#creating-a-publish-branch)
+  - [Developing locally](./publishing/#developing-locally)
 
 -----
 
